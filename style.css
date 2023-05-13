@@ -1,0 +1,219 @@
+:root {
+	--navBar: rgb(30, 170, 80);
+	--mainColor: rgb(220, 252, 231);
+	--fontColor: rgba(240, 253, 244, .8);
+	--darkColor1: rgba(5, 46, 22, .8);
+	--mainLinearBGColor: linear-gradient(180deg, var(--navBar), var(--mainColor) 100%);
+	--mainLinearBGColor1: linear-gradient(0deg, var(--navBar), var(--mainColor) 100%);
+}
+
+* {
+	margin: 0;
+	height: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color: var(--fontColor);
+}
+
+#navbar {
+	font-size: 1.5rem;
+	height: 10vh;
+	width: 100%;
+	background-color: var(--navBar);
+	position: fixed;
+	display: flex;
+	justify-content: center;
+}
+
+#navbar a {
+	text-decoration: none;
+	color: var(--fontColor);
+	padding: 10px;
+	animation-name: example;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes example {
+	from {
+		color: var(--fontColor);
+	}
+
+	to {
+		color: yellowgreen;
+	}
+}
+
+#navbar ul {
+	margin-top: 50px;
+	list-style-type: none;
+	padding: 0px;
+	display: flex;
+	justify-content: flex-end;
+	gap: 20px;
+}
+
+#navbar li {
+	margin: 0px 10px;
+}
+
+#welcome-section {
+	color: var(--darkColor1);
+	min-height: 100vh;
+	background: var(--mainLinearBGColor);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#welcome-section h1 {
+	font-size: 5rem;
+}
+
+#welcome-section-details {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+#projects {
+	min-height: 100vh;
+	padding-top: 12vh;
+	background: var(--mainColor);
+}
+
+.projects-one {
+	height: 50px;
+	font-size: 2rem;
+	color: var(--navBar);
+	box-shadow: 5px 5px 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.gridparent {
+	height: 60vh;
+	margin-top: 120px;
+	padding: 50px;
+	display: grid;
+	place-items: center;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 50px;
+}
+
+.project-tile {
+	text-align: center;
+	padding: 20px;
+	width: 320px;
+	height: 320px;
+	border: 5px solid var(--darkColor1);
+	border-radius: 20px;
+}
+
+.project-tile img {
+	width: 250px;
+	height: 250px;
+}
+
+.project-tile a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.project-tile:hover {
+	background-color: greenyellow;
+}
+
+.project-tile a:visited {
+	color: var(--darkColor1);
+}
+
+.other-projects {
+	height: 5vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+.other-projects a {
+	color: var(--fontColor);
+	background-color: var(--navBar);
+	width: 150px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.other-projects a:hover {
+	background-color: var(--darkColor1);
+}
+
+#contact {
+	color: var(--darkColor1);
+	min-height: 100vh;
+	padding-top: 12vh;
+	background: var(--mainLinearBGColor1);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#contact h2 {
+	font-size: 2rem;
+	text-decoration: underline;
+}
+
+.contact-details {
+	color: var(--fontColor);
+	font-size: 2.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+}
+
+.logos {
+	height: 10vh;
+}
+
+.logos img {
+	height: 40%;
+}
+
+footer {
+	padding-top: 10px;
+	height: 5vh;
+	width: 100%;
+	color: var(--fontColor);
+	background-color: var(--navBar);
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+	gap: 10px;
+}
+
+footer a:hover {
+	color: greenyellow;
+}
